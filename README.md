@@ -66,3 +66,14 @@ ORDER BY Total DESC;
 </details>
 
 Results
+#### **Orders** by **Payment Method**
+<p align="center">
+SQL Output: Orders by Payment Method<br>
+  <kbd><img src="asset/activity.png"> </kbd> <br>
+</p>
+
+<br>
+<p align="center">
+  <kbd><img src="asset/gambar_2_mau_x_newcust.png" > </kbd> <br>
+ Chart: Orders by Payment Method
+</p>
