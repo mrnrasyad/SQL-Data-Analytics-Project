@@ -67,7 +67,6 @@ ORDER BY Total DESC;
 
 Results
 #### **Orders** by **Payment Method**
-PayPal leads as the most used payment method, with credit and debit cards close behind. However, completed orders (88) are only slightly higher than pending (85) and cancelled (77), showing that many transactions fail to finish — a sign of possible issues in processing or customer follow-through.
 <p align="center">
 SQL Output: Orders by Payment Method<br>
   <kbd><img src="image/1.png" width=400px> </kbd> <br>
@@ -79,6 +78,19 @@ SQL Output: Orders by Payment Method<br>
  Chart: Orders by Payment Method
 </p>
 
+#### **Orders** by **Status**
+<p align="center">
+SQL Output: Orders by Status<br>
+  <kbd><img src="image/6.png" width=400px> </kbd> <br>
+</p>
+
+<br>
+<p align="center">
+  <kbd><img src="image/6-6.png" width=600px> </kbd> <br>
+ Chart: Orders by Status
+</p>
+
+
 #### **Sales** by **City**
 <p align="center">
 SQL Output: Sales by City<br>
@@ -88,5 +100,41 @@ SQL Output: Sales by City<br>
 <br>
 <p align="center">
   <kbd><img src="image/2-2.png" width=600px> </kbd> <br>
- Chart: Orders by Payment Method
+ Chart: Sales by City
+</p>
+
+#### **Sales** by **Product Category**
+<p align="center">
+SQL Output: Sales by Product Category<br>
+  <kbd><img src="image/3.png" width=400px> </kbd> <br>
+</p>
+
+<br>
+<p align="center">
+  <kbd><img src="image/3-3.png" width=600px> </kbd> <br>
+ Chart: Sales by Product Category
+</p>
+
+#### **Revenue** per **Month**
+<p align="center">
+SQL Output: Revenue per Month<br>
+  <kbd><img src="image/4.png" width=400px> </kbd> <br>
+</p>
+
+<br>
+<p align="center">
+  <kbd><img src="image/4-4.png" width=600px> </kbd> <br>
+ Chart:  =Revenue per Month
+</p>
+
+#### Top Selling Products
+<p align="center">
+SQL Output: Top Selling Products<br>
+  <kbd><img src="image/5.png" width=400px> </kbd> <br>
+</p>
+
+<br>
+<p align="center">
+  <kbd><img src="image/5-5.png" width=600px> </kbd> <br>
+ Chart: Top Selling Products
 </p>
