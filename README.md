@@ -20,8 +20,8 @@ The dataset used in this project is the same one from my [previous project](http
 
 #### Create Database and Relational Database
 **Importing the database:**
-- Create a database using `CREATE DATABASE sql_project;`
-- Import the cleaned CSV file into the `sql_project` database.
+- Create a database using `CREATE DATABASE`
+- Import the cleaned CSV file into the database.
 
 **Creating the relational database:**
 - Create tables using `CREATE TABLE`.
