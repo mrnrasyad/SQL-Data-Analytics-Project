@@ -1,4 +1,4 @@
-# Sales Analysis using SQL: A Data Analytics Project
+# Sales Data Analysis with SQL: A Data Analytics Project
 
 ## Brief Description about this Project
 The goal of this project is to create a relational database and use custom SQL queries to perform Exploratory Data Analysis (EDA) in order to gain insights from the data. **Microsoft SQL** is used for database creation and analysis, while **Excel** serves as the visualization tool.
