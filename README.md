@@ -1,7 +1,7 @@
-# Sales Data Analysis with SQL: A Data Analytics Project
+# SQL Data Analytics Project with Power BI Visualization
 
 ## Brief Description about this Project
-The goal of this project is to create a relational database and use custom SQL queries to perform Exploratory Data Analysis (EDA) in order to gain insights from the data. **Microsoft SQL** is used for database creation and analysis, while **Excel** serves as the visualization tool.
+The goal of this project is to create a relational database and use custom SQL queries to perform Exploratory Data Analysis (EDA) to gain insights from the data. This project also demonstrates the ETL process by extracting data with custom SQL queries, transforming and loading it using Power Query, and creating new measures with DAX. The processed data is then presented in an interactive dashboard. Microsoft SQL is used for database creation and analysis, while Excel and Power BI serve as visualization tools (charts and dashboards).
 
 ## Data Preparation
 #### Data Description
@@ -20,7 +20,7 @@ The dataset used in this project is the same one from my [previous project](http
 
 #### Create Database and Relational Database
 **Importing the database:**
-- Create a database using `CREATE DATABASE`
+- Create a database using `CREATE DATABASE`.
 - Import the cleaned CSV file into the database.
 
 **Creating the relational database:**
@@ -319,6 +319,56 @@ SQL Output: Top Selling Products<br>
 
 **Recommendation:** Maintain focus on high-performing electronics and appliances through promotions and inventory prioritization. For low-selling items, evaluate whether to reduce stock, bundle with popular products, or run targeted campaigns to boost demand.
 
+## Dashboard Creation using Power BI
+#### Extract Data from Database using Custom Queries
+- Connect to MS SQL Database.
+- Write custom SQL queries to select the required columns and join multiple tables using `JOIN`.
+<details>
+  <summary>Queries</summary>
+  
+  ```sql
+SELECT
+    o.OrderID,
+    o.OrderDate,
+    c.CustomerName,
+    c.CustomerLocation,
+    p.ProductName,
+    p.Category,
+    p.Price,
+    ol.Quantity,
+    ol.TotalAmount,
+    pm.Name AS PaymentMethod,
+    os.Name AS OrderStatus
+FROM [Order] o
+JOIN Customer c 
+    ON o.CustomerID = c.CustomerID
+JOIN PaymentMethod pm 
+    ON o.PaymentMethodID = pm.PaymentMethodID
+JOIN OrderStatus os 
+    ON o.OrderStatusID = os.OrderStatusID
+JOIN OrderLine ol 
+    ON o.OrderID = ol.OrderID
+JOIN Product p 
+    ON ol.ProductID = p.ProductID;
+  ```
+</details>
+
+#### Transform and Load with Power Query in Power BI
+- Use Power Query to apply transformations:
+  - Data type corrections (dates, numbers, text).
+  - Standardize formats (e.g., YYYY-MM-DD for dates).
+  - Rename column names.
+- Load the transformed data into the PowerBI data model.
+
+#### Visualize Data with Power BI
+- Create measures DAX (Data Analysis Expressions) in PowerBI:
+  - Create a new measure for **Total Order Count**.
+  - Create a new measure for **Completed Revenue** (Revenue from orders with completed status).
+- Design visuals:
+  - Add separate cards for **Order Count**, **Total Revenue**, and **Completed Revenue**.
+  - Use line charts to show total revenue trends per month.
+  - Use bar charts for **Payment Method** and **Order Status** trends, as well as **Top Products** and **Top Customer Locations**.
+  - Add filters for **Order Status**, **Payment Method**, and **Product Category**. 
 
 ## Summary
 - PayPal is the most used payment method, while Gift Card and Amazon Pay are least used.
