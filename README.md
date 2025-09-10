@@ -159,6 +159,7 @@ JOIN OrderStatus o ON s.[Status] = o.[Name];
 Relational database design (Using [QuickDBD](https://www.quickdatabasediagrams.com/)): 
 <p align="center">
   <kbd><img src="image/relational.png"> </kbd> <br>
+  Relational Database Design
 </p>
 
 
@@ -369,6 +370,11 @@ JOIN Product p
   - Use line charts to show total revenue trends per month.
   - Use bar charts for **Payment Method** and **Order Status** trends, as well as **Top Products** and **Top Customer Locations**.
   - Add filters for **Order Status**, **Payment Method**, and **Product Category**. 
+
+<p align="center">
+  <kbd><img src="image/PowerBI.jpg"> </kbd> <br>
+ Power BI Sales Dashboard
+</p>
 
 ## Summary
 - PayPal is the most used payment method, while Gift Card and Amazon Pay are least used.
